@@ -22,3 +22,9 @@ EXPOSE 80
 EXPOSE 443
 
 #CMD ["nginx", "-g", "daemon off;"]
+
+WORKDIR /tmp
+COPY nginx.sh nginx.sh
+
+#ENTRYPOINT ["/tmp/nginx.sh"]
+#CMD ["NGINX"]
